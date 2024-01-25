@@ -5,18 +5,19 @@
 */
 void rev_string(char *s)
 {
-	char *p = s;
 	int i = 0;
 	int j = 0;
 
-	while (p[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i = i + 1;
 	}
 
-	for (; i > 0 ; i--)
+	for (; i > j ; i--)
 	{
-		*(s + j) = p[i - 1];
+		char t = s[i - 1];
+		s[i - 1] = s[j];
+		s[j] = t;
 		j++;
 	}
 }
