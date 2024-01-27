@@ -26,7 +26,7 @@ int _atoi(char *s)
 		}
 		else
 		{
-			return -2147483648;
+			return (-2147483648);
 		}
 
 		i++;
