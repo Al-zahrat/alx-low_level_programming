@@ -20,10 +20,15 @@ int _atoi(char *s)
 	}
 	while (s[i] != '\0' && (s[i] >= '0' && s[i] <= '9'))
 	{
-		x = (x * 10) + (s[i] - '0');
+		if ((2147483647 - (s[i] - '0')) >= x * 10)
+		{
+			x = (x * 10) + (s[i] - '0');
+		}else{
+			return -1;
+		}
+
 		i++;
 	}
-	if (x < 2147483647)
-		x = sign * x;
+	x = sign * x;
 	return (x);
 }
