@@ -19,6 +19,7 @@ int _atoi(char *s)
 				x = -x;
 			}
 		}
+		i++;
 	}
 	return (x);
 }
