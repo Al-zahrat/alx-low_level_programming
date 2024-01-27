@@ -23,5 +23,7 @@ int _atoi(char *s)
 		x = (x * 10) + (s[i] - '0');
 		i++;
 	}
-	return (sign * x);
+	if (x < 2147483647)
+		x = sign * x;
+	return (x);
 }
