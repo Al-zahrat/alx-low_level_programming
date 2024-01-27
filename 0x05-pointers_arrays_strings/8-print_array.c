@@ -10,12 +10,7 @@ void print_array(int *a, int n)
 
 	for (; i <= n; i++)
 	{
-		if (i == n)
-		{
-			_putchar(a[i]);
-		}
-		else
-			printf("%d, ", a[i]);
+		printf("%d, ", a[i]);
 	}
 	_putchar('\n');
 }
