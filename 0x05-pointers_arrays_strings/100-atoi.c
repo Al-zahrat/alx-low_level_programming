@@ -8,18 +8,17 @@ int _atoi(char *s)
 {
 	int x = 0;
 	int i = 0;
+	int sign = 1;
 
 	while (s[i] != '\0')
 	{
+		if (s[i] == '-')
+			sign = -1;
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			x = (x * 10) + s[i];
-			if (s[i - 1] == 45)
-			{
-				x = -x;
-			}
+			x = (x * 10) + (s[i] - '0');
 		}
 		i++;
 	}
-	return (x);
+	return (x * sign);
 }
