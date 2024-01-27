@@ -23,8 +23,10 @@ int _atoi(char *s)
 		if ((2147483647 - (s[i] - '0')) >= x * 10)
 		{
 			x = (x * 10) + (s[i] - '0');
-		}else{
-			return -1;
+		}
+		else
+		{
+			return -2147483648;
 		}
 
 		i++;
