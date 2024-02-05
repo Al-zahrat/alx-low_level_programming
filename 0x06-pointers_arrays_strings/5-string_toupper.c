@@ -4,8 +4,9 @@
  * @s: parameter
  * Return: string
 */
-char *string_toupper(char *s)
+char *string_toupper(char *p)
 {
+	char *s = p;
 	while (*s)
 	{
 		if (*s <= 122 && *s >= 97)
