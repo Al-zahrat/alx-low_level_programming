@@ -8,7 +8,7 @@
 char *cap_string(char *s)
 {
 	char *p = s;
-	int x;
+	int x = 1;
 
 	while (*p != '\0')
 	{
@@ -20,15 +20,14 @@ char *cap_string(char *s)
 			*p == ')' || *p == '{' ||
 			*p == '}')
 		{
-			x = alphaL(*(++p));
-			if (x == 1)
-			{
-				*p -= 32;
-			}
-
+			x = 1;
 		}
-		else
-			p++;
+		else if (x == 1 && alphaL(*p) == 1)
+		{
+			*p -= 32;
+			x = 0;
+		}
+		++p;
 	}
 	return (s);
 }
