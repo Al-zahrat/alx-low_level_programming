@@ -1,10 +1,23 @@
 #include "main.h"
 /**
+ * alphaL - function that check if char is lowercase
+ * @i: parameter
+ * Return: integer
+*/
+int alphaL(char i)
+{
+	if (i <= 'z' && i >= 'a')
+		return (1);
+	else if (i >= 'A' && i <= 'Z')
+		return (2);
+	else
+		return (0);
+}
+/**
  * cap_string - function that capitalizes all words
  * @s: parameter
  * Return: string
 */
-
 char *cap_string(char *s)
 {
 	char *p = s;
@@ -38,18 +51,4 @@ char *cap_string(char *s)
 		++p;
 	}
 	return (s);
-}
-/**
- * alphaL - function that check if char is lowercase
- * @i: parameter
- * Return: integer
-*/
-int alphaL(char i)
-{
-	if (i <= 'z' && i >= 'a')
-		return (1);
-	else if (i >= 'A' && i <= 'Z')
-		return (2);
-	else
-		return (0);
 }
