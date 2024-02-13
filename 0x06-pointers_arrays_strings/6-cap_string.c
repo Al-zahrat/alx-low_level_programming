@@ -27,6 +27,8 @@ char *cap_string(char *s)
 			*p -= 32;
 			x = 0;
 		}
+		else if (x && (*p >= 'A' && *p <= 'Z'))
+			x = 0;
 		++p;
 	}
 	return (s);
