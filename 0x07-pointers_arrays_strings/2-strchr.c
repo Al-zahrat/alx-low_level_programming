@@ -13,10 +13,7 @@ char *_strchr(char *s, char c)
 		{
 			return (s);
 		}
-		else
-		{
-			s++;
-		}
+		s = s + 1;
 	}
 	return ('\0');
 }
