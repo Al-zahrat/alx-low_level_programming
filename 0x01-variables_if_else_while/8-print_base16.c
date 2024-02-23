@@ -6,15 +6,15 @@
 */
 int main(void)
 {
-	int i = 97;
+	int i = 48;
 
-	while (i <= 102)
+	while (i <= 57)
 	{
 		putchar(i + '\0');
 		i++;
 	}
-	i = 48;
-	while (i <= 57)
+	i = 97;
+	while (i <= 102)
 	{
 		putchar(i + '\0');
 		i++;
