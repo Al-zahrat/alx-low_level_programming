@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * print_last_digit - prints the last digit
  * @c: parameter
@@ -16,7 +17,11 @@ int print_last_digit(int c)
 	}
 	else
 	{
-		r = (c * (-1)) % 10;
+		if (c > INT_MIN)
+			r = (c * (-1)) % 10;
+		else if (c == INT_MIN)
+			r = 8;
+
 		_putchar(r + '0');
 		return (r);
 	}
