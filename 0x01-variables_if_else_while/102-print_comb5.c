@@ -18,7 +18,7 @@ int main(void)
 				{
 					s1 = (i * 10) + j;
 					s2 = (k * 10) + l;
-					if (s2 > s2)
+					if (s2 > s1)
 					{
 						putchar(i + '0');
 						putchar(j + '0');
