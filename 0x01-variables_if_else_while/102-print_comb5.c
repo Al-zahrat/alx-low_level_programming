@@ -1,5 +1,30 @@
 #include <stdio.h>
 /**
+ * sumL - function to get the sum
+ * @x: parameter
+ * @y: parameter
+ * @z: parameter
+ * @w: parameter
+*/
+void sumL(int x, int y, int z, int w)
+{
+	s1 = (x * 10) + y;
+	s2 = (z * 10) + w;
+	if (s2 > s1)
+	{
+		putchar(x + '0');
+		putchar(y + '0');
+		putchar(' ');
+		putchar(z + '0');
+		putchar(w + '0');
+		if (x != 9 || y != 8)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+}
+/**
  * main - Entry point
  * Descrition: combinations of two two-digit numbers
  * Return: 0 success
@@ -16,21 +41,7 @@ int main(void)
 			{
 				for (l = 0; l <= 9; l++)
 				{
-					s1 = (i * 10) + j;
-					s2 = (k * 10) + l;
-					if (s2 > s1)
-					{
-						putchar(i + '0');
-						putchar(j + '0');
-						putchar(' ');
-						putchar(k + '0');
-						putchar(l + '0');
-						if (i != 9 || j != 8)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					sumL(i, j, k, l);
 				}
 			}
 		}
