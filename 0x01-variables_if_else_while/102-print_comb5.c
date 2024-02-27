@@ -8,6 +8,8 @@
 */
 void sumL(int x, int y, int z, int w)
 {
+	int s1, s2;
+
 	s1 = (x * 10) + y;
 	s2 = (z * 10) + w;
 	if (s2 > s1)
