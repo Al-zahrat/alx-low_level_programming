@@ -15,24 +15,24 @@ void times_table(void)
 			{
 				if (j == 0)
 				{
-					putchar(s + '0');
+					_putchar(s + '0');
 				}
 				if (s < 10)
 				{
-					putchar(',');
-					putchar(' ');
-					putchar(' ');
-					putchar(s + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(s + '0');
 				}
 				else
 				{
-					putchar(',');
-					putchar(' ');
-					putchar((s / 10) + '0');
-					putchar((s % 10) + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar((s / 10) + '0');
+					_putchar((s % 10) + '0');
 				}
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
