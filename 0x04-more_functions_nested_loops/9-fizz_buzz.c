@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - Entry point
  * Description: program to print fizz buzz
@@ -20,9 +20,9 @@ int main(void)
 			printf("%d", i);
 
 		if (i < 100)
-			_putchar(' ');
+			printf(" ");
 		i++;
 	}
-	_putchar('\n');
+	printf("\n");
 	return (0);
 }
