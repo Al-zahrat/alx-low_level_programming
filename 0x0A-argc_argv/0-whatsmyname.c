@@ -1,4 +1,5 @@
 #include "main.h"
+#define UNUSED(x) void(x)
 /**
  * main - Entry point
  * Description: program to print  the file name
