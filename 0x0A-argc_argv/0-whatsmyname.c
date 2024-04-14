@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #define UNUSED(x) void(x)
 /**
  * main - Entry point
@@ -7,7 +8,7 @@
  * @argv: parameter
  * Return: 0 success
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	UNUSED(argc);
 	printf("%s\n", argv[0]);
