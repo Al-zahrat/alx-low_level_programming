@@ -33,13 +33,22 @@ void print_number(int n)
 int rev(int x)
 {
 	int y = 0;
+	int sign = -1;
 
 	if (x == 0)
 		return (x);
+	if (x < 0)
+	{
+		x = -x;
+	}
+	else
+	{
+		sign = 1;
+	}
 	while (x != 0)
 	{
 		y = (y * 10) + (x % 10);
 		x = x / 10;
 	}
-	return (y);
+	return (y * sign);
 }
