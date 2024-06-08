@@ -6,15 +6,21 @@
 */
 char *rot13(char *str)
 {
-	char *s = str;
-	char *d = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *b = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char i, j;
+	int i, j;
+	char *x = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char *y = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 
-	while (*s)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (i = 0; i
-		s++;
+		for (j = 0; x[j] != '\0'; j++)
+		{
+			if (str[i] == x[j])
+			{
+				str[i] = y[j];
+				break;
+			}
+
+		}
 	}
 	return (str);
 }
