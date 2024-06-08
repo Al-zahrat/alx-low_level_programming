@@ -34,6 +34,8 @@ int rev(int x)
 {
 	int y = 0;
 
+	if (x == 0)
+		return (x);
 	while (x != 0)
 	{
 		y = (y * 10) + (x % 10);
