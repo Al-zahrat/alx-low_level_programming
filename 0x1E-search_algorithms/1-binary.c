@@ -1,5 +1,21 @@
 #include "search_algos.h"
 /**
+ * printarray - function to print array
+ * @array: parameter
+ * @start: parameter
+ * @end: parameter
+*/
+void printarray(int *array, int start, int end)
+{
+	int i;
+
+	for (i = start; i < end; i++)
+	{
+		printf(" %d,", array[i]);
+	}
+	printf(" %d\n", array[end]);
+}
+/**
  * binary_search - searches for a value in a sorted array
  * @array: parameter
  * @size: parameter
@@ -8,27 +24,27 @@
 */
 int binary_search(int *array, size_t size, int value)
 {
-	int l = 0;
-	int r = size - 1;
-	int mid;
+	size_t l = 0;
+	size_t r = size - 1;
+	size_t mid;
 
-	while (l != r)
+	while (l <= r)
 	{
-		mid = (r - l) / 2;
-		if (mid > value)
+		printf("Searching in array:");
+		printarray(array, l, r);
+		mid = l + (r - l) / 2;
+		if (array[mid] > value)
 		{
 			r = mid - 1;
 		}
 		else
 		{
-			l = mid;
+			l = mid + 1;
 		}
-		printf("Searching in array:");
-		for (; l < r; l++)
-			printf(" %d,", array[l]);
-		printf(" %d\n", array[r]);
-		if (mid == value)
+		if (array[mid] == value)
+		{
 			return (mid);
+		}
 	}
 	return (-1);
 }
