@@ -1,6 +1,4 @@
 #include "search_algos.h"
-#include <stddef>
-#include <stdio.h>
 /**
  * linear_search - function for searching
  * @array: parameter
